@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.ejs": "html",
+    "functional": "cpp",
+    "mutex": "cpp",
+    "*.ipp": "cpp",
+    "ostream": "cpp",
+    "iosfwd": "cpp"
+  },
+  "cmake.configureOnOpen": false
+}

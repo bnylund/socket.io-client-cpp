@@ -1,11 +1,11 @@
 //
-//  sio_message.h
+//  sio_message.hpp
 //
 //  Created by Melo Yao on 3/25/15.
 //
 
-#ifndef __SIO_MESSAGE_H__
-#define __SIO_MESSAGE_H__
+#ifndef __SIO_MESSAGE_HPP__
+#define __SIO_MESSAGE_HPP__
 #include <string>
 #include <memory>
 #include <vector>
