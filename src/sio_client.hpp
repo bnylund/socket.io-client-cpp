@@ -17,8 +17,7 @@ using std::stringstream;
 
 namespace sio
 {
-    class client_impl;
-    
+    template <bool tls = false>
     class client {
     public:
         enum close_reason
@@ -35,7 +34,7 @@ namespace sio
         
         typedef std::function<void(std::string const& nsp)> socket_listener;
         
-        client() : m_impl(new client_impl()) {}
+        client() : m_impl(new client_impl<tls>()) {}
         ~client() {
             delete m_impl;
         }

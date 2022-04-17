@@ -54,6 +54,7 @@ using namespace std;
 #include <asio/error_code.hpp>
 #include <asio/io_service.hpp>
 
+#include <type_traits>
 #include <functional>
 #include <sstream>
 #include <chrono>
@@ -72,6 +73,7 @@ namespace sio
     
     typedef websocketpp::client<client_config> client_type;
     
+    template <bool tls = false>
     class client_impl {
         
     protected:
@@ -83,7 +85,6 @@ namespace sio
             con_closed
         };
         
-        template <bool tls>
         client_impl():
             m_ping_interval(0),
             m_ping_timeout(0),
